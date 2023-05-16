@@ -2,6 +2,7 @@ import os
 import yaml
 
 new_configs = 0
+base_dir = 'your/absolute/path/here'
 def check_info(phone, last):
     try:
         phone = int(phone)
@@ -17,7 +18,7 @@ def check_info(phone, last):
         exit()
 
 def make_files(last):
-    sip_dir = f'/home/lramsey/scripts/Workspace/customers/{last}'
+    sip_dir = f'{base_dir}/{last}'
     #uid = 1000 # find out and change
     #gid = 1000
     if not os.path.exists(sip_dir):
